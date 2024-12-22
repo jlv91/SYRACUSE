@@ -1,0 +1,23 @@
+services:
+  syra-flask-app:
+    build:
+      context: syra-flask-app
+    ports:
+      - 5000:5000
+    environment:
+      - WEBSERVICE_URL=http://syra-drools:8080/syra
+    depends_on:
+      - syra-drools
+    networks:
+      - syra-network
+
+  syra-drools:
+    build:
+      context: syra-drools
+    ports:
+      - 8080:8080
+    networks:
+      - syra-network
+      
+networks:
+  syra-network:
