@@ -9,9 +9,14 @@
   <Body>
     <TaskList>
       <StartTask Identifier="task_0"/>
-      <RuleTask ExecutionMode="RetePlus" ExitCriteria="None" Identifier="suite" Ordering="Default">
+      <RuleTask ExecutionMode="RetePlus" ExitCriteria="None" Identifier="calcul" Ordering="Default">
         <RuleList>
-          <Package Name="demo.syracuse.suite"/>
+          <Package Name="demo.syracuse.suite.calcul"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="output" Ordering="Default">
+        <RuleList>
+          <Package Name="demo.syracuse.suite.output"/>
         </RuleList>
       </RuleTask>
       <StopTask Identifier="task_1"/>
@@ -19,22 +24,27 @@
     <NodeList>
       <TaskNode Identifier="node2" Task="task_0"/>
       <TaskNode Identifier="node3" Task="task_1"/>
-      <TaskNode Identifier="node_2" Task="suite"/>
+      <TaskNode Identifier="node_0" Task="calcul"/>
+      <TaskNode Identifier="node_1" Task="output"/>
     </NodeList>
     <TransitionList>
-      <Transition Identifier="link4" Source="node2" Target="node_2"/>
-      <Transition Identifier="link5" Source="node_2" Target="node3"/>
+      <Transition Identifier="link2" Source="node2" Target="node_0"/>
+      <Transition Identifier="link3" Source="node_0" Target="node_1"/>
+      <Transition Identifier="link4" Source="node_1" Target="node3"/>
     </TransitionList>
   </Body>
   <Resources>
     <ResourceSet Locale="fr_FR">
-      <Data Name="node3#y">165.0</Data>
+      <Data Name="node3#y">245.0</Data>
       <Data Name="node2#y">15.0</Data>
-      <Data Name="node3#x">35.281</Data>
-      <Data Name="node2#x">35.281</Data>
-      <Data Name="node_2#label">suite</Data>
-      <Data Name="node_2#x">35.281</Data>
-      <Data Name="node_2#y">90.0</Data>
+      <Data Name="node3#x">39.731</Data>
+      <Data Name="node2#x">39.731</Data>
+      <Data Name="node_0#label">calcul</Data>
+      <Data Name="node_0#x">39.731</Data>
+      <Data Name="node_1#label">output</Data>
+      <Data Name="node_0#y">90.0</Data>
+      <Data Name="node_1#x">39.731</Data>
+      <Data Name="node_1#y">170.0</Data>
     </ResourceSet>
   </Resources>
   <Properties/>
