@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Deployment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" ruleAppName="syra_ruleapp" managingXom="true">
+  <eAnnotations source="ilog.rules.custom_properties">
+    <details key="Dep_Groups" value="rtsAdministrator,rtsConfigManager"/>
+    <details key="Dep_SnapshotCreationKind" value="NEVER"/>
+  </eAnnotations>
+  <name>RES</name>
+  <uuid>eabb554c-ca88-4942-a49c-1023a10c86ad</uuid>
+  <targets label="Decision Service Execution"/>
+  <operations operationName="syracuse">
+    <operation href="syracuse.dop#2d659446-bcfa-4d07-a231-ae33608715a3"/>
+    <properties key="ruleset.version">
+      <value><![CDATA[1.0]]></value>
+    </properties>
+    <properties key="com.ibm.rules.engine.bytecode.generation">
+      <value><![CDATA[true]]></value>
+    </properties>
+    <properties key="ruleset.trace.enabled">
+      <value><![CDATA[false]]></value>
+    </properties>
+    <properties key="ruleset.debug.enabled">
+      <value><![CDATA[false]]></value>
+    </properties>
+    <properties key="ruleset.status">
+      <value><![CDATA[enabled]]></value>
+    </properties>
+  </operations>
+  <versionPolicies label="Incrémenter les numéros de version mineure" ruleset="INCREMENT_MINOR" default="true" recurrent="true">
+    <description><![CDATA[Met à jour la version mineure pour chaque ensemble de règles. La nouvelle version devient disponible mais les versions précédentes sont conservées.]]></description>
+  </versionPolicies>
+  <versionPolicies label="Utiliser les numéros de version de base" recurrent="true">
+    <description><![CDATA[Utilise les numéros fournis dans la configuration de déploiement. Remplace la dernière version de chaque ensemble de règles par cette édition. Utilisé pour les correctifs logiciels ou le développement.]]></description>
+  </versionPolicies>
+  <versionPolicies label="L'utilisateur peut définir les numéros de version" ruleset="MANUAL" recurrent="true">
+    <description><![CDATA[Vous permet d'entrer vos propres numéros de version. Utilisé pour les correctifs logiciels ou les mises à jour d'une édition précédente.]]></description>
+  </versionPolicies>
+</com.ibm.rules.studio.model.decisionservice:Deployment>

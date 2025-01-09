@@ -32,6 +32,6 @@ curl -X 'POST' \
 
 La page web est http://localhost:5000
 
-# Docker Compose
+## Docker Compose
 Pour construire et lancer les 2 containers:
 <br><code>docker-compose up --build</code>

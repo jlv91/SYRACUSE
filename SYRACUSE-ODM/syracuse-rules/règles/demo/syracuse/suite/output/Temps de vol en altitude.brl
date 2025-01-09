@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Temps de vol en altitude</name>
+  <uuid>24b54c0d-e2df-4392-92bc-3ef0e426d2a5</uuid>
+  <locale>fr_FR</locale>
+  <definition><![CDATA[définitions 
+	soit Un étant un élément parmi les éléments de 'la suite de Syracuse' 
+		tel que la valeur de cet élément est plus petit que U0  ; 
+si
+	il n'y a pas d'élément parmi les éléments de 'la suite de Syracuse' 
+		tel que la valeur de cet élément est plus petit que U0
+		et l'index de cet élément est plus petit que l'index de Un , 
+alors 
+	assigner le temps de vol en altitude de 'la suite de Syracuse' à l'index de Un ; ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

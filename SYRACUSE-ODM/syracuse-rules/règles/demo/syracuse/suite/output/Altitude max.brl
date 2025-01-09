@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Altitude max</name>
+  <uuid>832433b1-afd8-4c58-a15e-200e4636da0c</uuid>
+  <locale>fr_FR</locale>
+  <definition><![CDATA[définitions 
+	soit Un étant un élément parmi les éléments de 'la suite de Syracuse' ; 
+si
+	il n'y a pas d'élément parmi les éléments de 'la suite de Syracuse' 
+		tel que la valeur de cet élément est plus grand que la valeur de Un , 
+alors 
+	assigner l'altitude max de 'la suite de Syracuse' à la valeur de Un ; ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

@@ -1,0 +1,35 @@
+
+#loadGetterSetterAsProperties
+property origin "xom:/syracuse-rules//syracuse-xom"
+property uuid "8c56bd22-d558-4b38-90e7-4c123599b53e"
+package demo.syracuse.mdl;
+
+
+class Element
+{
+    int index;
+    int valeur;
+    Element(int arg1, int arg2);
+    boolean hasAnEvenValue();
+    string toString();
+}
+
+class Syracuse
+{
+    int altitudeMax;
+    readonly demo.syracuse.mdl.Element lastElement;
+    java.util.List suite domain 0,* class demo.syracuse.mdl.Element;
+    int tpsVol;
+    int tpsVolEnAltitude;
+    Syracuse();
+    void addElement(int arg1, int arg2)
+                #update;
+}
+
+class Util
+{
+    Util();
+    static void debug(object arg);
+    static void debug(string arg);
+}
+

@@ -1,0 +1,32 @@
+# Vocabulary Properties
+uuid = 12fb463e-38b6-4ac9-bc8f-793d1e29e728
+
+# Term: suite de Syracuse
+@suite\ de\ Syracuse#gender = FEMALE
+
+# Term: valeur
+@valeur#gender = FEMALE
+
+# demo.syracuse.mdl.Element
+demo.syracuse.mdl.Element#concept.label = élément
+demo.syracuse.mdl.Element.hasAnEvenValue()#phrase.navigation = {this} a une valeur paire
+demo.syracuse.mdl.Element.index#phrase.action = assigner l'index {this, PARTITIVE_ARTICLE} à {index}
+demo.syracuse.mdl.Element.index#phrase.navigation = {index} {this, PARTITIVE_ARTICLE}
+demo.syracuse.mdl.Element.valeur#phrase.action = assigner le valeur {this, PARTITIVE_ARTICLE} à {valeur}
+demo.syracuse.mdl.Element.valeur#phrase.navigation = {valeur} {this, PARTITIVE_ARTICLE}
+
+# demo.syracuse.mdl.Syracuse
+demo.syracuse.mdl.Syracuse#concept.label = suite de Syracuse
+demo.syracuse.mdl.Syracuse.addElement(int,int)#phrase.action = ajouter l'élément d'index {0} d'altitude {1} à {this}
+demo.syracuse.mdl.Syracuse.altitudeMax#phrase.action = assigner l'altitude max {this, PARTITIVE_ARTICLE} à {altitude max}
+demo.syracuse.mdl.Syracuse.altitudeMax#phrase.navigation = {altitude max} {this, PARTITIVE_ARTICLE}
+demo.syracuse.mdl.Syracuse.lastElement#phrase.navigation = {dernier élément} {this, PARTITIVE_ARTICLE}
+demo.syracuse.mdl.Syracuse.suite#phrase.action = assigner les éléments {this, PARTITIVE_ARTICLE} à {élément}
+demo.syracuse.mdl.Syracuse.suite#phrase.navigation = {élément} {this, PARTITIVE_ARTICLE}
+demo.syracuse.mdl.Syracuse.tpsVol#phrase.action = assigner le temps de vol {this, PARTITIVE_ARTICLE} à {temps de vol}
+demo.syracuse.mdl.Syracuse.tpsVol#phrase.navigation = {temps de vol} {this, PARTITIVE_ARTICLE}
+demo.syracuse.mdl.Syracuse.tpsVolEnAltitude#phrase.action = assigner le temps de vol en altitude {this, PARTITIVE_ARTICLE} à {temps de vol en altitude}
+demo.syracuse.mdl.Syracuse.tpsVolEnAltitude#phrase.navigation = {temps de vol en altitude} {this, PARTITIVE_ARTICLE}
+
+# demo.syracuse.mdl.Util
+demo.syracuse.mdl.Util#concept.label = util

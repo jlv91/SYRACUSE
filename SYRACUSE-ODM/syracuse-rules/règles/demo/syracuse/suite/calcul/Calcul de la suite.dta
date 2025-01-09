@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>Calcul de la suite</name>
+  <uuid>21f00dfd-46fb-4394-89ea-6e88910e1cb3</uuid>
+  <priority></priority>
+  <locale>fr_FR</locale>
+  <definition>
+<DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
+  <Body>
+    <Properties>
+      <Property Name="OptimizedExpressions"><![CDATA[false]]></Property>
+      <Property Name="OptimizedExpressionMemory"><![CDATA[false]]></Property>
+    </Properties>
+    <Preconditions>
+      <Text><![CDATA[définitions
+	
+	soit Un étant le dernier élément de 'la suite de Syracuse' tel que la valeur de cet élément n'est pas 1 ; ]]></Text>
+    </Preconditions>
+    <Structure>
+      <ConditionDefinitions>
+        <ConditionDefinition Id="C0">
+          <ExpressionDefinition>
+            <Text><![CDATA[Un a une valeur paire est <un booléen> ]]></Text>
+          </ExpressionDefinition>
+        </ConditionDefinition>
+      </ConditionDefinitions>
+      <ActionDefinitions>
+        <ActionDefinition Id="A0">
+          <ExpressionDefinition>
+            <Text><![CDATA[ajouter l'élément d'index (l'index de Un + 1) d'altitude <un nombre> à 'la suite de Syracuse' ]]></Text>
+          </ExpressionDefinition>
+        </ActionDefinition>
+      </ActionDefinitions>
+    </Structure>
+    <Contents>
+      <Partition DefId="C0">
+        <Condition>
+          <Expression>
+            <Param><![CDATA[vrai]]></Param>
+          </Expression>
+          <ActionSet>
+            <Action DefId="A0">
+              <Expression>
+                <Param><![CDATA[la valeur de Un / 2]]></Param>
+              </Expression>
+            </Action>
+          </ActionSet>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Otherwise/>
+          </Expression>
+          <ActionSet>
+            <Action DefId="A0">
+              <Expression>
+                <Param><![CDATA[1 + 3 * la valeur de Un]]></Param>
+              </Expression>
+            </Action>
+          </ActionSet>
+        </Condition>
+      </Partition>
+    </Contents>
+  </Body>
+  <Resources DefaultLocale="en_US">
+    <ResourceSet Locale="fr_FR">
+      <Data Name="Definitions(C0)#HeaderText"><![CDATA[Un est pair]]></Data>
+      <Data Name="Definitions(A0)#Width"><![CDATA[381]]></Data>
+      <Data Name="Definitions(A0)#HeaderText"><![CDATA[Ajouter l'élément suivant avec la valeur]]></Data>
+    </ResourceSet>
+  </Resources>
+</DT>
+</definition>
+</ilog.rules.studio.model.dt:DecisionTable>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Initialisation</name>
+  <uuid>3efef287-cb92-4895-92f2-3f9421d4fd1f</uuid>
+  <locale>fr_FR</locale>
+  <definition><![CDATA[si 
+	U0 est plus grand que 0
+alors 
+	ajouter l'élément d'index 0 d'altitude U0 à 'la suite de Syracuse';]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

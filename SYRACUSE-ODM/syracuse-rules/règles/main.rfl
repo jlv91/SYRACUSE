@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>main</name>
+  <uuid>b27277e5-24e7-4c13-9a38-09c85ab0dd81</uuid>
+  <locale>fr_FR</locale>
+  <categories>any</categories>
+  <rfModel>
+<Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+  <Body>
+    <TaskList>
+      <StartTask Identifier="task_0"/>
+      <RuleTask ExecutionMode="RetePlus" ExitCriteria="None" Identifier="suite" Ordering="Default">
+        <RuleList>
+          <Package Name="demo.syracuse.suite"/>
+        </RuleList>
+      </RuleTask>
+      <StopTask Identifier="task_1"/>
+    </TaskList>
+    <NodeList>
+      <TaskNode Identifier="node2" Task="task_0"/>
+      <TaskNode Identifier="node3" Task="task_1"/>
+      <TaskNode Identifier="node_2" Task="suite"/>
+    </NodeList>
+    <TransitionList>
+      <Transition Identifier="link4" Source="node2" Target="node_2"/>
+      <Transition Identifier="link5" Source="node_2" Target="node3"/>
+    </TransitionList>
+  </Body>
+  <Resources>
+    <ResourceSet Locale="fr_FR">
+      <Data Name="node3#y">165.0</Data>
+      <Data Name="node2#y">15.0</Data>
+      <Data Name="node3#x">35.281</Data>
+      <Data Name="node2#x">35.281</Data>
+      <Data Name="node_2#label">suite</Data>
+      <Data Name="node_2#x">35.281</Data>
+      <Data Name="node_2#y">90.0</Data>
+    </ResourceSet>
+  </Resources>
+  <Properties/>
+</Ruleflow>
+</rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

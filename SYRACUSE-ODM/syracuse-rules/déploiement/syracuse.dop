@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.query.extractor="http://ilog.rules.studio/model/query/extractor.ecore" rulesetName="syracuse" usingRuleflow="true" ruleflowName="main" targetRuleProjectName="syracuse-rules">
+  <name>syracuse</name>
+  <uuid>2d659446-bcfa-4d07-a231-ae33608715a3</uuid>
+  <referencedVariables variableName="u0" variableSetName="variables">
+    <variableSet href="../règles/variables.var#e32eac74-10f2-48e0-8dd1-d10690243e4f"/>
+  </referencedVariables>
+  <referencedVariables variableName="syracuse" variableSetName="variables" direction="OUT">
+    <variableSet href="../règles/variables.var#e32eac74-10f2-48e0-8dd1-d10690243e4f"/>
+  </referencedVariables>
+  <ruleflow href="../règles/main.rfl#b27277e5-24e7-4c13-9a38-09c85ab0dd81"/>
+  <extractor xsi:type="ilog.rules.studio.model.query.extractor:QueryExtractor" name="syracuse_extractor" validator="Default Validator"/>
+  <targetRuleProject href="../../syracuse-rules#08e9b214-ec6b-4b67-86d6-d9e311df7524"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>variables</name>
+  <uuid>e32eac74-10f2-48e0-8dd1-d10690243e4f</uuid>
+  <variables name="u0" type="java.lang.Integer" initialValue="" verbalization="U0"/>
+  <variables name="syracuse" type="demo.syracuse.mdl.Syracuse" initialValue="new demo.syracuse.mdl.Syracuse()" verbalization="la suite de Syracuse"/>
+</ilog.rules.studio.model.base:VariableSet>
