@@ -1,1 +1,7 @@
 .vscode
+.settings
+sortie
+rapports
+.syncEntries
+target
+*.log
