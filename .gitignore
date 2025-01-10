@@ -2,6 +2,7 @@
 .settings
 sortie
 rapports
+xom-libraries
 .syncEntries
 target
 *.log

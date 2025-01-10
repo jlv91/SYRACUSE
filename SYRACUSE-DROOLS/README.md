@@ -1,4 +1,4 @@
-# Calcul des éléments de la [suite de Syracuse](https://fr.wikipedia.org/wiki/Conjecture_de_Syracuse) avec Drools et Docker.
+# Calcul des éléments de la [suite de Syracuse](https://fr.wikipedia.org/wiki/Conjecture_de_Syracuse) avec Drools 8 et Docker.
 
 ## syra-drools
 <br>C'est un projet DROOLS Maven qui peut s'exécuter dans un container Docker. Il expose un webservice REST qui calcule la suite de Syracuse.
