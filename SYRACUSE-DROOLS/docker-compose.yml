@@ -1,7 +1,7 @@
 services:
-  syra-flask-app:
+  syra-flask-drools:
     build:
-      context: syra-flask-app
+      context: syra-flask-drools
     ports:
       - 5000:5000
     environment:
@@ -9,7 +9,7 @@ services:
     depends_on:
       - syra-drools
     networks:
-      - syra-network
+      - drools_network
 
   syra-drools:
     build:
@@ -17,7 +17,7 @@ services:
     ports:
       - 8080:8080
     networks:
-      - syra-network
+      - drools_network
       
 networks:
-  syra-network:
+  drools_network:

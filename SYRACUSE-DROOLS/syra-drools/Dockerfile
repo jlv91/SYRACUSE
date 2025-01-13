@@ -14,5 +14,8 @@ FROM eclipse-temurin:17-jdk
 WORKDIR /app
 # Copy the built JAR file from the previous stage (build) to this container
 COPY --from=build /app/target/syracuse.jar .
+
+EXPOSE 8080
+
 # Set the command to run the application
 CMD ["java", "-jar", "syracuse.jar"]
