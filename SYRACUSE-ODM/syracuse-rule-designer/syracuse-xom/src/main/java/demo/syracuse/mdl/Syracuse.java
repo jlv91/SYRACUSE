@@ -3,6 +3,8 @@ package demo.syracuse.mdl;
 import java.util.LinkedList;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 /**
  * Stocke les résultats.
  */
@@ -50,6 +52,7 @@ public class Syracuse {
     	this.suite.add(new Element(index, value));
     }
     
+    @JsonIgnore
     public Element getLastElement() {
     	if (this.suite.isEmpty()) return null;
     	return this.suite.get(this.suite.size() - 1);
