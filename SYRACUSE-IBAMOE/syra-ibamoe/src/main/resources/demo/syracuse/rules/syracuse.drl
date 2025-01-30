@@ -1,0 +1,76 @@
+package demo.syracuse.rules
+
+
+import demo.syracuse.mdl.Element;
+import demo.syracuse.mdl.Util;
+import demo.syracuse.mdl.Syracuse;
+
+
+// On récupère la valeur de l'entier de départ pour initialiser la suite.
+rule "Initialisation U0"
+    ruleflow-group "Calcul_Suite"
+    when
+        $u0 : Integer(this > 0)
+        $syra : Syracuse()
+    then
+       Element e = new Element(0, $u0);
+       Util.debug(e);
+       $syra.add(e);
+       insert(e);
+    end
+
+rule "Un pair"
+    ruleflow-group "Calcul_Suite"
+    when
+        $Un : Element($index : index, $valeur : valeur, valeur % 2 == 0)
+        $syra : Syracuse()
+    then
+       Element e = new Element($index + 1, $valeur/2);
+       Util.debug(e);
+       $syra.add(e);
+       insert(e);
+    end
+
+rule "Un impair"
+    ruleflow-group "Calcul_Suite"
+    when
+        $Un : Element($index : index, $valeur : valeur, valeur != 1, valeur % 2 == 1)
+        $syra : Syracuse()
+    then
+       Element e = new Element($index + 1, 3 * $valeur + 1);
+       Util.debug(e);
+       $syra.add(e);
+       insert(e);
+    end
+
+// On récupère l'élément de la suite dont la valeur est 1.
+rule "Calcul temps de vol"
+    ruleflow-group "Post_traitement"
+    when
+        e : Element($in : index, valeur == 1)
+        $syra : Syracuse()
+    then
+       $syra.setTpsVol($in);
+    end
+
+// On récupère le premier élément de la suite dont la valeur est plus petite que U0.
+// C'est donc le min en index.
+rule "Calcul temps de vol en altitude"
+    ruleflow-group "Post_traitement"
+    when
+        $u0 : Integer()
+        accumulate(Element($in: index, valeur < $u0); $tps : min($in))
+        $syra : Syracuse()
+    then
+       $syra.setTpsVolEnAltitude($tps);
+    end
+
+// On récupère l'élément de la suite qui correspond au maximun de la valeur.
+rule "Calcul altitude max"
+   ruleflow-group "Post_traitement"
+   when
+        accumulate(Element($val : valeur); $alt : max($val))
+        $syra :Syracuse()
+    then
+       $syra.setAltitudeMax($alt);
+    end
