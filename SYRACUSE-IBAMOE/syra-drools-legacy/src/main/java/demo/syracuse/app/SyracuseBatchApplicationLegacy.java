@@ -13,8 +13,8 @@ import org.slf4j.LoggerFactory;
 
 import demo.syracuse.mdl.Syracuse;
 
-public class SyracuseBatchApplication {
-    private static final  Logger LOGGER = LoggerFactory.getLogger(SyracuseBatchApplication.class);
+public class SyracuseBatchApplicationLegacy {
+    private static final  Logger LOGGER = LoggerFactory.getLogger(SyracuseBatchApplicationLegacy.class);
   
     public static void main(String[] args) {
 
@@ -24,12 +24,12 @@ public class SyracuseBatchApplication {
         final Map<String, Object> params = new HashMap<>();
 
         int u0 = 1;
+        StatelessKieSession kieSession = kieContainer.newStatelessKieSession();
         while (u0 < 100) {
             params.put("u0", u0);
-            StatelessKieSession kieSession = kieContainer.newStatelessKieSession();
             @SuppressWarnings("unchecked")
-            RuleFlowProcessInstance rfp = (RuleFlowProcessInstance)
-                kieSession.execute(
+            RuleFlowProcessInstance rfp = (RuleFlowProcessInstance) 
+                kieSession.execute( // each execute on a stateless session create internally a new session
                     CommandFactory.newStartProcess("syra", params)
                 );
 

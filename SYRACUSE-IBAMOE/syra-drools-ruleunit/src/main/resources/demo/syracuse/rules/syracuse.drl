@@ -1,0 +1,42 @@
+package demo.syracuse.rules
+unit SyracuseUnit
+
+import demo.syracuse.mdl.Element;
+
+// On récupère la valeur de l'entier de départ pour initialiser la suite.
+rule "Initialisation syracuse"
+    when
+        $u0 : /u0[this > 0]
+    then
+       Element e = new Element(0, $u0);
+       suite.add(e);
+    end
+
+// On récupère l'élément de la suite dont la valeur est 1.
+rule "Calcul temps de vol"
+    when
+        /suite[$in : index, valeur == 1]
+        $syra : /syracuse
+    then
+       $syra.setTpsVol($in);
+    end
+
+// On récupère le premier élément de la suite dont la valeur est plus petite que U0.
+// C'est donc le min en index.
+rule "Calcul temps de vol en altitude"
+    when
+        $u0 : /u0
+        accumulate(/suite[$in: index, valeur < $u0]; $tps : min($in))
+        $syra : /syracuse
+    then
+       $syra.setTpsVolEnAltitude($tps);
+    end
+
+// On récupère l'élément de la suite qui correspond au maximun de la valeur.
+rule "Calcul altitude max"
+    when
+        accumulate(/suite[$val : valeur]; $alt : max($val))
+        $syra : /syracuse
+    then
+       $syra.setAltitudeMax($alt);
+    end

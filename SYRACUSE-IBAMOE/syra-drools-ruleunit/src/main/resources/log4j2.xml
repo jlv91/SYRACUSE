@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+
+    <Appenders>
+        <Console name="ConsoleAppender" target="SYSTEM_OUT">
+            <PatternLayout 
+              pattern="[%d] [%F:%L] [%-5p] %m%n"/>
+        </Console>
+        <File name="LogToFile" fileName="syra.log" append = "false">
+            <PatternLayout>
+                <Pattern>[%d] [%F:%L] [%-5p] %m%n"</Pattern>
+            </PatternLayout>
+        </File>
+    </Appenders>
+    
+    <Loggers>
+        <Root level="INFO">
+            <AppenderRef ref="ConsoleAppender"/>
+             <AppenderRef ref="LogToFile"/>
+        </Root>
+       <Logger name="demo.syracuse.drools.MyRuleRuntimeEventListener" level="info" additivity="false">
+            <AppenderRef ref="ConsoleAppender"/>
+            <AppenderRef ref="LogToFile"/>
+        </Logger>
+        <Logger name="demo.syracuse.mdl.Util" level="debug" additivity="false">
+            <AppenderRef ref="ConsoleAppender"/>
+            <AppenderRef ref="LogToFile"/>
+        </Logger>
+    </Loggers>
+</Configuration>
