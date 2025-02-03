@@ -30,7 +30,7 @@ public class SyracuseBatchApplication {
             @SuppressWarnings("unchecked")
             RuleFlowProcessInstance rfp = (RuleFlowProcessInstance)
                 kieSession.execute(
-                    CommandFactory.newStartProcess("syra2", params)
+                    CommandFactory.newStartProcess("syra", params)
                 );
 
             Syracuse syra = (Syracuse) rfp.getVariable("syracuse");

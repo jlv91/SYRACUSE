@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>demo.ibamoe</groupId>
-    <artifactId>syracuse</artifactId>
+    <artifactId>syracuse-drools-legacy</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <description>Implémentation de la suite de Syracuse avec IBAMOE pour un appel Batch</description>
+    <description>Implémentation de la suite de Syracuse avec IBAMOE pour un appel Batch en Drools legacy</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -111,8 +111,6 @@
             <artifactId>slf4j-api</artifactId>
             <version>${slf4j.version}</version>
         </dependency>
-
-
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-slf4j2-impl</artifactId>
