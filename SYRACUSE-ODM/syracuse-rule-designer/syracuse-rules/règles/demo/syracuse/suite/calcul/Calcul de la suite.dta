@@ -13,7 +13,6 @@
     </Properties>
     <Preconditions>
       <Text><![CDATA[définitions
-	
 	soit Un étant le dernier élément de 'la suite de Syracuse' tel que la valeur de cet élément n'est pas 1 ; ]]></Text>
     </Preconditions>
     <Structure>
@@ -48,7 +47,7 @@
         </Condition>
         <Condition>
           <Expression>
-            <Otherwise/>
+            <Param><![CDATA[faux]]></Param>
           </Expression>
           <ActionSet>
             <Action DefId="A0">

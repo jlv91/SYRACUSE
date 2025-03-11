@@ -4,7 +4,7 @@
   <uuid>d6aab1ee-5972-45d1-a171-8ac17ec99e46</uuid>
   <locale>fr_FR</locale>
   <definition><![CDATA[définitions 
-	soit Un étant le dernier élément de 'la suite de Syracuse' tel que la valeur de cet élément est 1 ; 
+	soit Un étant un élément parmi les éléments de 'la suite de Syracuse' tel que la valeur de cet élément est 1 ; 
 alors 
 	assigner le temps de vol de 'la suite de Syracuse' à l'index de Un ; ]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>
