@@ -4,4 +4,5 @@
 3 solution de moteurs de règles sont testés :
 <li>La solution Kogito - Drools - jBPM
 <li>La solution IBAMOE qui est basé sur Kogito mais maintenu par IBM
-<li> la solution ODM produit d'IBM
+<li>La solution ODM produit d'IBM
+
